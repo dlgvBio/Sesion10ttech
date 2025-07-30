@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laboratorio 10 - Variables y Operaciones</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Laboratorio 10: Variables y Operaciones</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#parte1">Parte 1: Variables Básicas</a></li>
+      <li><a href="#parte2">Parte 2: Azúcar y Bananas</a></li>
+      <li><a href="#parte3">Parte 3: Operaciones Finales</a></li>
+      <li><a href="#Calculadora">Calculadora</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="parte1">
+      <h2>Parte 1: Variables Básicas</h2>
+      <script>
+        // Declaro variables que representan elementos identitarios. 
+        // Me sirve para reflexionar cómo en la programación, como en la vida, los valores se transforman.
+        let nombre = "Maria", edad = 28, esEstudiante = true;
+
+        // Imprimo los valores iniciales. En este punto el código representa un estado previo.
+        console.log(nombre, edad, esEstudiante);
+
+        // Realizo cambios en las variables. Este acto simbólicamente me recuerda que puedo reescribir mi narrativa personal.
+        nombre = "Carlos"; edad = 35; esEstudiante = false;
+
+        // Imprimo los nuevos valores. Aquí observo cómo el sistema acepta la transformación con naturalidad.
+        console.log(nombre, edad, esEstudiante);
+      </script>
+      <p>Este ejercicio me enseña como usar las variables básicas, los resultados se pueden observar impresos con console.log.</p>
+    </section>
+
+    <section id="parte2">
+      <h2>Parte 2: Azúcar y Producción de Bananas</h2>
+      <script>
+        // Aquí declaro cuánta azúcar tengo disponible. Me representa el recurso energético que ofrezco.
+        let cantidadAzucar = 5; // kg
+
+        // Esta variable indica cuánto consume cada banana. Algo así como la energía que se requiere por unidad producida.
+        let pesoBananas = 0.5;  // kg por banana
+
+        // Calculo cuántas bananas puedo producir. Me hace pensar en cuánto puedo transformar de lo que tengo.
+        let bananasProducidas = cantidadAzucar / pesoBananas;
+
+        // Imprimo el resultado. Es una forma de visualizar cuánto se puede generar a partir del insumo disponible.
+        console.log("Bananas producidas:", bananasProducidas);
+      </script>
+      <p>Esta parte muestra con un ejemplo el uso de las variables basicas y operaciones, aplicando conceptos aprendidos en clase T. Tech.</p>
+    </section>
+
+    <section id="parte3">
+      <h2>Parte 3:Uso de Operadores Lógicos y Concatenación de Strings</h2>
+      <script>
+        // Trabajo con dos valores base para practicar operaciones matemáticas esenciales.
+        let a = 6, b = 2;
+
+        // Realizo una suma. La unión de valores siempre es una construcción.
+        let suma = a + b;
+
+        // Realizo una resta. Me recuerda que el quitar también genera un nuevo valor.
+        let resta = a - b;
+
+        // Multiplicación. Potenciar un valor lo transforma más allá de su forma inicial.
+        let multiplicacion = a * b;
+
+        // División. Separar no es fragmentar, es revelar proporciones internas.
+        let division = a / b;
+
+        // Imprimo los resultados para observar cómo cada operación genera un significado único.
+        console.log("Suma:", suma, "Resta:", resta, "Multiplicación:", multiplicacion, "División:", division);
+      </script>
+      <p>Este ejercicio se aplican los operadores lógicos y el uso de strings, los resultados se pueden observar impresos con console.log.</p>
+
+
+    </section>
+
+    <section id="parte5">
+  <h2>Parte 5: Calculadora con operaciones aritméticas</h2>
+  <div class="calculadora">
+    <input type="number" id="valorA" placeholder="Número principal">
+    <input type="number" id="valorB" placeholder="Número secundario">
+
+    <select id="operacionBasica">
+      <option value="sumar">Sumar</option>
+      <option value="restar">Restar</option>
+      <option value="multiplicar">Multiplicar</option>
+      <option value="dividir">Dividir</option>
+    </select>
+
+    <button onclick="calcularOperacion()">Ejecutar</button>
+  </div>
+
+</section>
+
+<script>
+  function calcularOperacion() {
+    const a = parseFloat(document.getElementById("valorA").value);
+    const b = parseFloat(document.getElementById("valorB").value);
+    const op = document.getElementById("operacionBasica").value;
+    let resultado;
+
+    switch (op) {
+      case "sumar":
+        resultado = a + b;
+        console.log("Resultado (suma):", resultado);
+        break;
+      case "restar":
+        resultado = a - b;
+        console.log("Resultado (resta):", resultado);
+        break;
+      case "multiplicar":
+        resultado = a * b;
+        console.log("Resultado (multiplicación):", resultado);
+        break;
+      case "dividir":
+        if (b !== 0) {
+          resultado = a / b;
+          console.log("Resultado (división):", resultado);
+        } else {
+          console.log("Error: no se puede dividir entre cero");
+        }
+        break;
+      default:
+        console.log("Operación desconocida");
+    }
+  }
+</script>
+
+
+  </main>
+
+  <footer>
+    <p>Laboratorio de programación Sesión 10 - Diana Lorena Gil 2025</p>
+  </footer>
+</body>
+</html>
